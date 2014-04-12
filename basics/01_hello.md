@@ -1,3 +1,6 @@
+Hello world
+============
+
 压缩版下载地址：<a href="http://www.lellansin.com/wp-content/uploads/2012/10/vc6_cn_setup.exe">vc6_cn_setup</a>
 完整版、加强版等下载地址：<a href="http://hi.baidu.com/jsj08/item/fa8ac4c44aafa22947d5c046" rel="nofollow" target="_blank">Visual C++ 6.0</a>
 
@@ -14,8 +17,7 @@
 
 ```cpp
 #include<stdio.h>
-
-main()
+int main()
 {
     printf("Hello world");
 }

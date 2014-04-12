@@ -1,3 +1,6 @@
+结构体
+============
+
 <span style="font-size: xx-large;">结构体</span>
 
 可以将多种数据类型组合起来的结构
@@ -116,8 +119,7 @@ struct student{
 	int age;
 	int grade;
 } ;
-
-main()
+int main()
 {
 	struct student alan;
 	alan.number = 001;
@@ -148,8 +150,7 @@ struct student{
 	char name[256];
 	int age;
 } ;
-
-main()
+int main()
 {
 	struct student class_02[5];
 	int k;
@@ -191,8 +192,7 @@ struct student{
 	int age;
 	int grade;
 } ;
-
-main()
+int main()
 {
 	struct student class1[5] = {
 		{ 01, "Alan", "man", 16, 12 },
@@ -228,8 +228,7 @@ struct DATE{
 	int month;
 	int day;
 } *date ;
-
-main()
+int main()
 {
 	date->year = 2012;
 	printf("%d", date->year);
@@ -248,8 +247,7 @@ struct DATE{
 	int month;
 	int day;
 } date = { 2012, 11, 27 }, *d ;
-
-main()
+int main()
 {
 	d = &date;
 	printf("%d", d->year);
@@ -270,8 +268,7 @@ struct time{
 	int hour;
 	int min;
 } ;
-
-main()
+int main()
 {
 	struct time now = { 3, 55 }, pass = { 1, 33 }, result;
 	result = add(now, pass);

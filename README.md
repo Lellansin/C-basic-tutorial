@@ -1,6 +1,7 @@
 C/C++ 学习教程
 ======
 
+
 * [入门教程](basics/README.html)
     * [hello world](basics/01_hello.html)
     * [数值、字符与字符串](basics/02_var.html)
@@ -15,6 +16,9 @@ C/C++ 学习教程
     * [调试以及资料收集](basics/11_debug.html)
     * [结构体](basics/12 struct.html)
 
+* [数学基础](math/README.html)
+    * [信息存储](math/information-in-computer.html)
+    
 教程预览地址：http://doc.lellansin.com
 
 **Note:** 本教程使用 [GitBook](http://www.gitbook.io) 生成。观看页面如有BUG或者想要改进请访问 [GitBook on GitHub](https://github.com/GitbookIO/javascript).

@@ -1,3 +1,6 @@
+数值、字符与字符串
+============
+
 <img class="alignnone" title="第2讲 数值、字符与字符串" src="http://pic002.cnblogs.com/images/2012/401241/2012101700414410.jpg" alt="" width="515" height="370" />
 
 <h1>声明方式</h1>
@@ -101,8 +104,7 @@ scanf("%d", &i);
 
 ```cpp
 #include<stdio.h>
-
-main()
+int main()
 {
     int age;
     printf("你的年龄是？\n");

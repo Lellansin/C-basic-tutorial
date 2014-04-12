@@ -1,10 +1,11 @@
+运算符以及表达式
+==========
 
 ```cpp
 // 算术运算符
 
 #include <stdio.h>
-
-main()
+int main()
 {
     int i = 7, j = 8;
 
@@ -29,8 +30,7 @@ main()
 // 关系与逻辑运算符
 
 #include <stdio.h>
-
-main()
+int main()
 {
     int Alan = 18, Sam = 18, Jack = 16;
 
@@ -56,8 +56,7 @@ main()
 */
 
 #include <stdio.h>
-
-main()
+int main()
 {
     int chinese, math, english, sum;
 
@@ -78,8 +77,7 @@ main()
 
 ```cpp
 #include <stdio.h>
-
-main()
+int main()
 {
     int i = 5, b = 10;
 

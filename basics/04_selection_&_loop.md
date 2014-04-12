@@ -1,17 +1,22 @@
-<h1>选择结构</h1>
+选择结构与循环结构
+============
 
+<h1>选择结构</h1>
+<pre>
 1.if() else
 2.switch() case:
+</pre>
 
 <h1>循环结构</h1>
-
+<pre>
 1.while() 循环
 2.do while() 循环
 3.for() 循环
+</pre>
 
 终止循环：
-1.continue 终止该次循环
-2.break 终止该循环
+1.<font color="red">continue</font> 终止该次循环
+2.<font color="red">break</font> 终止该循环
 <h2>if else</h2>
 
 ```cpp
@@ -48,8 +53,7 @@ if(条件1)
 
 ```cpp
 #include <stdio.h>
-
-main()
+int main()
 {
     int salary = 2500;
     int rent = 850;
@@ -97,8 +101,7 @@ switch(变量)
 
 ```cpp
 #include <stdio.h>
-
-main()
+int main()
 {
     char cmd;
 
@@ -124,8 +127,7 @@ main()
 
 ```cpp
 #include <stdio.h>
-
-main()
+int main()
 {
     int score = 80;
 
@@ -154,8 +156,7 @@ main()
 
 ```cpp
 #include <stdio.h>
-
-main()
+int main()
 {
     int i = 0;
     while(i < 10)
@@ -170,8 +171,7 @@ main()
 
 ```cpp
 #include <stdio.h>
-
-main()
+int main()
 {
     char c;
 
@@ -200,8 +200,7 @@ for( 初始值; 条件; 变化 )
 
 ```cpp
 #include <stdio.h>
-
-main()
+int main()
 {
     int i;
     for( i = 0; i < 10; i++ )
