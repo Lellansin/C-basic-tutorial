@@ -1,0 +1,15 @@
+# Summary
+
+* [基础知识](basics/README.md)
+    * [第1讲 hello world](basics/01 hello.md)
+    * [第2讲 数值、字符与字符串](basics/02 var.md)
+    * [第3讲 运算符及表达式](basics/03 expression.md)
+    * [第4讲 选择结构与循环结构](basics/04 selection & loop.md)
+    * [第5讲 函数基本概念及作用域](basics/05 function.md)
+    * [第6讲 编译预处理命令](basics/06.md)
+    * [第7讲 数组](basics/07 array.md)
+    * [第8讲 指针的基本概念](basics/08 pointer basic.md)
+    * [第9讲 指针与数组](basics/09 pointer & array.md)
+    * [第10讲 字符串处理](basics/10 string.md)
+    * [第11讲 调试以及资料收集](basics/11 debug.md)
+    * [第12讲 结构体](basics/12 struct.md)

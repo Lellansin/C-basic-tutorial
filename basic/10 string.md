@@ -1,0 +1,296 @@
+<h2>字符与字符串的区别</h2>
+
+1)符号
+[code lang="c"]
+字符	' ' 单引号
+字符串	" " 双引号
+[/code]
+
+2)内容
+[code lang="c"]
+字符	单个字符
+字符串	多个字符
+[/code]
+
+3)输入输出格式
+[code lang="c"]
+字符	%c
+字符串	%s
+[/code]
+
+4)标识
+[code lang="c"]
+字符串	'\0'做结尾
+[/code]
+
+<h2>字符串的本质是?</h2>
+
+字符串本质上就是一个字符数组
+
+"hello world" 这样的字符串，就是包含其中各个元素的，并且结尾为'\0'的一个一维字符数组
+
+如:
+[code lang="c"]
+char hi[12]={'H','e','l','l','o',' ','w','o','r','l','d','\0'};
+[/code]
+
+因为一个字符串要有'\0'作为结尾
+所以字符数组的长度要比本身字符数目多一个
+
+如上例中,字符串有11个,但是字符数组长度要达到12
+
+
+<h2>字符串的定义与初始化</h2>
+
+字符串面量:
+"Hello world"         注意：字面量(双引号引起来的)是常量
+
+区别举例：
+[code lang="c"]
+"Alan"  常量
+char name[20] = "Jack";   // "Jack"是字面量 是常量  name是字符数组, 是变量
+[/code]
+
+注：
+常量不能被赋值，如讲2的值赋给1这样：
+[code lang="c"]
+1 = 2 是不行的，1是常量不能被赋值
+[/code]
+"string" 这样的字符串也是不能被赋值的：
+[code lang="c"]
+"string" = "Hello Jack" 这样是错的
+[/code]
+
+
+<h2>字符数组</h2>
+
+1)数组形式
+[code lang="c"]
+char hi[3]={'H', 'i','\0'};
+char hello[]={'H','e','l','l','o',' ','w','o','r','l','d','\0'};
+[/code]
+
+2)直接赋首地址
+[code lang="c"]
+char shool[20] = "第一中学";
+[/code]
+
+3)省略长度
+[code lang="c"]
+char name1[] = "Alan";
+char name2[] = { "Alan" };
+[/code]
+
+
+<h2>字符指针</h2>
+
+[code lang="c"]
+char *name3  = "Alan";
+char *s = "第一中学";
+[/code]
+
+思考:
+指针能不能直接赋给数组?
+
+
+<h2>字符串的遍历</h2>
+
+[code lang="c"]
+char hi[] = "I am happy" ;
+[/code]
+
+1.for循环遍历
+[code lang="c"]
+for(i=0; i<11; i++)
+{
+    printf("%c", hi);
+}
+[/code]
+
+2.直接输出
+[code lang="c"]
+printf(hi);
+[/code]
+
+3.字符串格式(%s)输出
+[code lang="c"]
+printf("%s", hi);
+[/code]
+
+
+<h2>字符串数组（二维字符数组）</h2>
+
+常见姓名：
+[code lang="c"]
+char name1[] = "张三";
+char name2[] = "李四";
+char name3[] = "王五";
+[/code]
+
+存储多个字符串：
+
+1)二维数组
+[code lang="c"]
+char name[][256] = { "张三", "李四", "王五" };
+[/code]
+
+2)一维指针数组
+[code lang="c"]
+char *name[] = { "张三", "李四", "王五" };
+[/code]
+
+
+<h2>对于printf，最重要的是？</h2>
+
+对于printf和scanf来说，字符串最重要的是其起始地址
+
+如打印一个字符串：
+[code lang="c"]
+char *text = "hey gays!";
+
+1) pirntf(text);
+2) printf("%s", text);
+[/code]
+
+对于printf这个函数而言，只要知道字符串开头的地址，
+那么就一直打印下去，一直到碰到'\0'的时候停止
+
+如：
+[code lang="c"]
+printf("Hello \0 world"); \\ hello 
+[/code]
+
+
+<h2>常见的字符串操作函数</h2>
+
+stdio.h
+
+输入：scanf()、gets()、getchar()
+输出：printf()、puts()、putchar()
+
+string.h
+
+连接：strcat()
+拷贝：strcpy()
+比较：strcmp()
+获取长度：strlen()
+大小写转换：strupr()、strlwr()
+拼接字符串：sprintf()
+
+示例：
+[code lang="c"]
+#include<stdio.h>
+#include<string.h>
+
+main()
+{
+    char *hi = "hello", s2 = "Alice";
+    char str[256], *pstr;
+    printf("%s \n", strcat(hi, " world"));//连接
+    printf("%s \n", strcpy(str, "come on")); //拷贝
+    printf("%s \n", strcmp("你好", "你好")); //比较
+    printf("%s \n", strlen(str)); //获取长度
+    printf("%s \n", strupr(str)); //转成大写
+}
+[/code]
+
+
+<h2>学会查询文档：</h2>
+1.右键查看定义
+2.度娘谷歌
+3.手册 
+4.自己撰写自己的文档
+
+
+<h2>关于函数传参数</h2>
+
+[code lang="c"]
+对于：int add(int a, int b);
+调用：add(5, 10);
+
+add函数中参数初始化时，相当于：
+int a = 5;  int b = 10
+
+对于：int swap(int *x, int *y);
+调用：swap(&i, &j);
+
+swap函数中参数初始化时 ，相当与：
+int *x = &i;  int *y = &j;
+[/code]
+
+
+<h2>strlen()</h2>
+
+[code lang="c"]
+#include<stdio.h>
+int mylength(char *aim);
+
+int main()
+{
+    char *str1 = "hello ";
+    printf("%d\n", mylength(str1));
+}
+
+int mylength(char *aim)
+{
+    int count=0;
+    while(*aim++){
+    count++;
+    }
+    return count;
+}
+[/code]
+
+
+<h2>strcat()</h2>
+
+[code lang="c"]
+#include<stdio.h>
+char * mycat(char *dest, char *src);
+
+int main()
+{
+	char str1[20] = "hello "; // 要拷贝的话需要有足够的内存
+	char *str2 = "world";
+	printf("%s\n", mycat(str1, str2));
+}
+
+char *mycat(char *dest, const char *src)
+{
+	char *address = dest;
+
+	while (*++dest) // 加到 '\0' 马上停止
+		;
+
+	while (*dest++ = *src++)
+		;
+
+	return address;
+}
+[/code]
+(感谢 灬蕾依丽雅 君的提醒, 该函数已修正)
+
+<h1>本讲小结</h1>
+
+一、字符串的本质，与字符的区别
+1)本质上是结尾为'\0'字符数组
+2)单双引号，书写区别
+3)输出格式"%c"和"%s"
+
+二、字符串的定义与初始化
+1)字面量
+2)数组
+3)指针
+
+三、常见的字符串操作，及其操作的实现
+连接(strcat)、拷贝(strcpy)、比较(strcmp)、获取长度(strlen)、大小写转换(strupr、strlwr)、拼接字符串(sprintf)
+
+以上部分函数的实现跨越在博主的 string.h 的实现中找到 <a href="http://www.lellansin.com/tutorials/c-standard-library" target="_blank">博主的 C标准库</a>
+
+课后作业 
+
+通过自己查找参考，理解并实现以上常见的字符串操作
+注：sprintf()只要掌握，不要求实现
+
+
+<h1><a href="http://www.lellansin.com/c%e8%af%ad%e8%a8%80%e5%85%a5%e9%97%a8%e6%95%99%e7%a8%8b-%e7%ac%ac11%e8%ae%b2-%e8%b0%83%e8%af%95%e4%bb%a5%e5%8f%8a%e8%b5%84%e6%96%99%e6%94%b6%e9%9b%86.html" title="Permalink to c语言入门教程 第11讲 调试以及资料收集" rel="bookmark">c语言入门教程 第11讲 调试以及资料收集</a></h1>
