@@ -12,13 +12,14 @@ struct 结构体名称{
 } ;
 
 举例：
-[code lang="c"]
+
+```cpp
 struct time{
 	int hour;
 	int minute;
 	int second;
 } ;
-[/code]
+```
 
 
 
@@ -27,7 +28,8 @@ struct time{
 <span style="font-size: xx-large;">结构体的定义</span>
 
 1)常规定义
-[code lang="c"]
+
+```cpp
 struct time{
 	int hour;
 	int minute;
@@ -35,14 +37,15 @@ struct time{
 } ;
 
 struct time t;
-[/code]
+```
 
 
 
 	如何定义一个int类型的变量？
-[code lang="c"]
+
+```cpp
 	int number;
-[/code]
+```
 
 
 
@@ -51,19 +54,21 @@ struct time t;
 
 
 2)声明的同时定义
-[code lang="c"]
+
+```cpp
 struct student{
 	char name[256];
 	char sex[2];
 	int age;
 	int grade;
 } Alan, Tom ;
-[/code]
+```
 
 
 
 3)使用结构体作为成员
-[code lang="c"]
+
+```cpp
 struct DATE{
 	int year;
 	int month;
@@ -76,13 +81,14 @@ struct person{
 } ;
 
 struct time t;
-[/code]
+```
 
 
 
 
 4)匿名结构体
-[code lang="c"]
+
+```cpp
 struct {
 	int number;
 	char name[256];
@@ -90,7 +96,7 @@ struct {
 	int age;
 	int grade;
 } Alan, Tom ;
-[/code]
+```
 
 
 
@@ -99,7 +105,8 @@ struct {
 
 使用“.”成员运算符来获取结构体中的成员
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>#include<string.h>
 
 struct student{
@@ -123,7 +130,7 @@ main()
 		   alan.number, alan.name, alan.sex, alan.age, alan.grade);
 }
 
-[/code]
+```
 
 
 
@@ -131,7 +138,8 @@ main()
 <span style="font-size: xx-large;">结构体数组</span>
 
 结构体数组的使用：
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 #include<string.h>
 
@@ -168,11 +176,12 @@ main()
 		printf("%d\n", class_02[k] .age);
 	}
 }
-[/code]
+```
 
 
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 
 struct student{
@@ -201,7 +210,7 @@ main()
 		class1[k].grade);
 	}
 }
-[/code]
+```
 
 
 
@@ -210,7 +219,8 @@ main()
 
 使用分量运算符“-&gt;”来获取成员
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 
 struct DATE{
@@ -225,11 +235,12 @@ main()
 	printf("%d", date->year);
 }
 
-[/code]
+```
 
 
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 
 struct DATE{
@@ -244,12 +255,13 @@ main()
 	printf("%d", d->year);
 }
 
-[/code]
+```
 
 
 
 用于函数的参数以及返回值:
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 
 struct time add(struct time now, struct time pass);
@@ -273,4 +285,4 @@ struct time add(struct time now, struct time pass)
 	rel.min = (now.min + pass.min)%60;
 	return rel;
 }
-[/code]
+```

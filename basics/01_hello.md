@@ -11,17 +11,17 @@
 
 接下来开始输入第一个程序的代码：
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 
 main()
 {
     printf("Hello world");
 }
-[/code]
+```
 
 输入完后记得保存（快捷键ctrl+s），然后找到菜单上的 组建-&gt;编译， 组建-&gt;执行
 
 如果运行成功，那么恭喜你，你已经开始了你的编程之旅
 如果有报错，可以仔细核对一下你的代码，看看是不是拼写有错
-<h1><a title="链向 c语言入门教程 第2讲 数值、字符与字符串 的固定链接" href="http://www.lellansin.com/?p=70" rel="bookmark">c语言入门教程 第2讲 数值、字符与字符串</a></h1>

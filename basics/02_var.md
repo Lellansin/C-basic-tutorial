@@ -5,7 +5,8 @@
 
 举例：
 
-[code lang="c"]
+
+```cpp
 // int类型
 int  i;           /* 普通声明 */
 int  j,k;         /* 同时声明多个 */
@@ -27,7 +28,7 @@ char letter = 'A';    /* 声明的同时赋值 */
 
 char c[20] = { 'H','e','l','l','o',' ','w','o','r','l','d' };
 char name[] = { 'A', 'l', 'a', 'n' };
- [/code]
+```
 
 <h1>转义字符</h1>
 
@@ -39,7 +40,8 @@ char name[] = { 'A', 'l', 'a', 'n' };
 '\"' 双引号
 '\\' 反斜杠
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 main()
 {
@@ -47,24 +49,26 @@ main()
     printf("001\tAlan\n");
     printf("002\tLellansin\n");
 }
-[/code]
+```
 
-[code lang="c"]
+
+```cpp
 输出结果：
 Num　　　Name
 001　　　Alan
 002　　　Lellansin
-[/code]
+```
 
 <h1>printf与scanf</h1>
 
 printf 打印，scanf 为输入
 
 形式
-[code lang="c"]
+
+```cpp
 printf(字符串，... );  // 点点点为多个参数
 scanf(字符串，... );
-[/code]
+```
 
 <h2>占位符</h2>
 
@@ -80,7 +84,8 @@ scanf(字符串，... );
 
 如：
 
-[code lang="c"]
+
+```cpp
 // 输出字符串要输出的年龄尚未确实值知道是 %d 十进制整数类型, 
 // 具体输出来是什么值则看后面 age 的具体值
 printf("Alan的年龄是%d", age); 
@@ -89,11 +94,12 @@ printf("Alan的年龄是%d", age);
 // 如果用户输入 10.2 则存入变量i中的值是 10，因为格式是十进制整数
 scanf("%d", &i);
 
-[/code]
+```
 
 举例：
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 
 main()
@@ -103,7 +109,5 @@ main()
     scanf("%d",&age); // 输入时变量前加上 “&” 符号
     printf("你的年龄是%d",age);
 }
-[/code]
+```
 
-<h1><a title="链向 c语言入门教程 全文索引 的固定链接" href="http://www.lellansin.com/tutorials" rel="bookmark">c语言入门教程 全文索引</a></h1>
-<h1><a title="链向 c语言入门教程 第3讲 运算符及表达式 的固定链接" href="http://www.lellansin.com/?p=74" rel="bookmark">下一讲 第3讲 运算符及表达式</a></h1>

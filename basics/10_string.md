@@ -1,27 +1,31 @@
 <h2>字符与字符串的区别</h2>
 
 1)符号
-[code lang="c"]
+
+```cpp
 字符	' ' 单引号
 字符串	" " 双引号
-[/code]
+```
 
 2)内容
-[code lang="c"]
+
+```cpp
 字符	单个字符
 字符串	多个字符
-[/code]
+```
 
 3)输入输出格式
-[code lang="c"]
+
+```cpp
 字符	%c
 字符串	%s
-[/code]
+```
 
 4)标识
-[code lang="c"]
+
+```cpp
 字符串	'\0'做结尾
-[/code]
+```
 
 <h2>字符串的本质是?</h2>
 
@@ -30,9 +34,10 @@
 "hello world" 这样的字符串，就是包含其中各个元素的，并且结尾为'\0'的一个一维字符数组
 
 如:
-[code lang="c"]
+
+```cpp
 char hi[12]={'H','e','l','l','o',' ','w','o','r','l','d','\0'};
-[/code]
+```
 
 因为一个字符串要有'\0'作为结尾
 所以字符数组的长度要比本身字符数目多一个
@@ -46,48 +51,55 @@ char hi[12]={'H','e','l','l','o',' ','w','o','r','l','d','\0'};
 "Hello world"         注意：字面量(双引号引起来的)是常量
 
 区别举例：
-[code lang="c"]
+
+```cpp
 "Alan"  常量
 char name[20] = "Jack";   // "Jack"是字面量 是常量  name是字符数组, 是变量
-[/code]
+```
 
 注：
 常量不能被赋值，如讲2的值赋给1这样：
-[code lang="c"]
+
+```cpp
 1 = 2 是不行的，1是常量不能被赋值
-[/code]
+```
 "string" 这样的字符串也是不能被赋值的：
-[code lang="c"]
+
+```cpp
 "string" = "Hello Jack" 这样是错的
-[/code]
+```
 
 
 <h2>字符数组</h2>
 
 1)数组形式
-[code lang="c"]
+
+```cpp
 char hi[3]={'H', 'i','\0'};
 char hello[]={'H','e','l','l','o',' ','w','o','r','l','d','\0'};
-[/code]
+```
 
 2)直接赋首地址
-[code lang="c"]
+
+```cpp
 char shool[20] = "第一中学";
-[/code]
+```
 
 3)省略长度
-[code lang="c"]
+
+```cpp
 char name1[] = "Alan";
 char name2[] = { "Alan" };
-[/code]
+```
 
 
 <h2>字符指针</h2>
 
-[code lang="c"]
+
+```cpp
 char *name3  = "Alan";
 char *s = "第一中学";
-[/code]
+```
 
 思考:
 指针能不能直接赋给数组?
@@ -95,49 +107,56 @@ char *s = "第一中学";
 
 <h2>字符串的遍历</h2>
 
-[code lang="c"]
+
+```cpp
 char hi[] = "I am happy" ;
-[/code]
+```
 
 1.for循环遍历
-[code lang="c"]
+
+```cpp
 for(i=0; i<11; i++)
 {
     printf("%c", hi);
 }
-[/code]
+```
 
 2.直接输出
-[code lang="c"]
+
+```cpp
 printf(hi);
-[/code]
+```
 
 3.字符串格式(%s)输出
-[code lang="c"]
+
+```cpp
 printf("%s", hi);
-[/code]
+```
 
 
 <h2>字符串数组（二维字符数组）</h2>
 
 常见姓名：
-[code lang="c"]
+
+```cpp
 char name1[] = "张三";
 char name2[] = "李四";
 char name3[] = "王五";
-[/code]
+```
 
 存储多个字符串：
 
 1)二维数组
-[code lang="c"]
+
+```cpp
 char name[][256] = { "张三", "李四", "王五" };
-[/code]
+```
 
 2)一维指针数组
-[code lang="c"]
+
+```cpp
 char *name[] = { "张三", "李四", "王五" };
-[/code]
+```
 
 
 <h2>对于printf，最重要的是？</h2>
@@ -145,20 +164,22 @@ char *name[] = { "张三", "李四", "王五" };
 对于printf和scanf来说，字符串最重要的是其起始地址
 
 如打印一个字符串：
-[code lang="c"]
+
+```cpp
 char *text = "hey gays!";
 
 1) pirntf(text);
 2) printf("%s", text);
-[/code]
+```
 
 对于printf这个函数而言，只要知道字符串开头的地址，
 那么就一直打印下去，一直到碰到'\0'的时候停止
 
 如：
-[code lang="c"]
+
+```cpp
 printf("Hello \0 world"); \\ hello 
-[/code]
+```
 
 
 <h2>常见的字符串操作函数</h2>
@@ -178,7 +199,8 @@ string.h
 拼接字符串：sprintf()
 
 示例：
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 #include<string.h>
 
@@ -192,7 +214,7 @@ main()
     printf("%s \n", strlen(str)); //获取长度
     printf("%s \n", strupr(str)); //转成大写
 }
-[/code]
+```
 
 
 <h2>学会查询文档：</h2>
@@ -204,7 +226,8 @@ main()
 
 <h2>关于函数传参数</h2>
 
-[code lang="c"]
+
+```cpp
 对于：int add(int a, int b);
 调用：add(5, 10);
 
@@ -216,12 +239,13 @@ int a = 5;  int b = 10
 
 swap函数中参数初始化时 ，相当与：
 int *x = &i;  int *y = &j;
-[/code]
+```
 
 
 <h2>strlen()</h2>
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 int mylength(char *aim);
 
@@ -239,12 +263,13 @@ int mylength(char *aim)
     }
     return count;
 }
-[/code]
+```
 
 
 <h2>strcat()</h2>
 
-[code lang="c"]
+
+```cpp
 #include<stdio.h>
 char * mycat(char *dest, char *src);
 
@@ -267,7 +292,7 @@ char *mycat(char *dest, const char *src)
 
 	return address;
 }
-[/code]
+```
 (感谢 灬蕾依丽雅 君的提醒, 该函数已修正)
 
 <h1>本讲小结</h1>

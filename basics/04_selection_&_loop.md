@@ -13,7 +13,8 @@
 1.continue 终止该次循环
 2.break 终止该循环
 <h2>if else</h2>
-[code lang="c"]
+
+```cpp
 // 形式1
 if(条件)
 { /*条件为真执行*/
@@ -40,12 +41,12 @@ if(条件1)
 { /*条件1、2为假才执行*/
     ...
 }
-
-[/code]
+```
 
 代码示例：
 
-[code lang="c"]
+
+```cpp
 #include <stdio.h>
 
 main()
@@ -66,11 +67,12 @@ main()
     }
 }
 
-[/code]
+```
 
 <h2>switch</h2>
 
-[code lang="c"]
+
+```cpp
 switch(变量)
 {
     case 情况1 :
@@ -88,11 +90,12 @@ switch(变量)
     default :  /* 默认情况 */
         ...
 }
-[/code]
+```
 
 代码示例
 
-[code lang="c"]
+
+```cpp
 #include <stdio.h>
 
 main()
@@ -114,11 +117,12 @@ main()
             printf("用户未响应，操作取消\n");
     }
 }
-[/code]
+```
 
 关于case穿透
 
-[code lang="c"]
+
+```cpp
 #include <stdio.h>
 
 main()
@@ -143,11 +147,12 @@ main()
     }
 }
 
-[/code]
+```
 
 <h2>while 循环</h2>
 
-[code lang="c"]
+
+```cpp
 #include <stdio.h>
 
 main()
@@ -158,11 +163,12 @@ main()
         printf("%d ", i);
     }
 }
-[/code]
+```
 
 <h2>do while 循环</h2>
 
-[code lang="c"]
+
+```cpp
 #include <stdio.h>
 
 main()
@@ -176,21 +182,23 @@ main()
     }while( c != 'Y');
 
 }
-[/code]
+```
 
 <h2>for 循环</h2>
 
-[code lang="c"]
+
+```cpp
 // 形式
 for( 初始值; 条件; 变化 )
 {
     ...
 }
-[/code]
+```
 
 示例:
 
-[code lang="c"]
+
+```cpp
 #include <stdio.h>
 
 main()
@@ -201,7 +209,7 @@ main()
         printf("%d\n", i);
     }
 }
-[/code]
+```
 
 <h2>continue与break</h2>
 
@@ -209,7 +217,8 @@ main()
 1.continue 终止该次循环
 2.break 终止该循环
 
-[code lang="c"]
+
+```cpp
 #include
 main()
 {
@@ -221,6 +230,5 @@ main()
         printf("%d ", i);
     }
 }
-[/code]
+```
 
-<h1><a title="链向 c语言入门教程 第5讲 函数基本概念及作用域 的固定链接" href="http://www.lellansin.com/?p=86" rel="bookmark">c语言入门教程 第5讲 函数基本概念及作用域</a></h1>
