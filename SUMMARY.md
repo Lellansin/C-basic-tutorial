@@ -1,7 +1,6 @@
 # Summary
 
-* [入门教程](basics/README.md)
-    * [hello world](basics/01_hello.md)
+* [入门教程](basics/01_hello.md)
     * [数值、字符与字符串](basics/02_var.md)
     * [运算符及表达式](basics/03_expression.md)
     * [选择结构与循环结构](basics/04_selection_&_loop.md)
