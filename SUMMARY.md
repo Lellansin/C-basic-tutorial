@@ -11,7 +11,7 @@
     * [指针与数组](basics/09_pointer_&_array.md)
     * [字符串处理](basics/10_string.md)
     * [调试以及资料收集](basics/11_debug.md)
-    * [结构体](basics/12 struct.md)
+    * [结构体](basics/12_struct.md)
 * [数学基础](math/README.md)
     * [信息存储](math/information-in-computer.md)
     * [CPU四则运算](math/cpu-calculation.md)

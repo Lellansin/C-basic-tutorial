@@ -14,11 +14,10 @@ C/C++ 学习教程
     * [指针与数组](basics/09_pointer_&_array.html)
     * [字符串处理](basics/10_string.html)
     * [调试以及资料收集](basics/11_debug.html)
-    * [结构体](basics/12 struct.html)
+    * [结构体](basics/12_struct.html)
 
 * [数学基础](math/README.html)
     * [信息存储](math/information-in-computer.html)
     
-教程预览地址：http://doc.lellansin.com
+教程预览地址：https://lellansin.gitbooks.io/c/
 
-**Note:** 本教程使用 [GitBook](http://www.gitbook.io) 生成。观看页面如有BUG或者想要改进请访问 [GitBook on GitHub](https://github.com/GitbookIO/javascript).
